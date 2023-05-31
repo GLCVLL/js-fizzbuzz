@@ -3,21 +3,24 @@ console.log('JS OK');
 
 // PRENDO L'ELEMENTO DAL DOM
 
-const blackboardElement= document.querySelector('.blackboard');
+const listElement= document.getElementById('numbers-list');
 
 // PREPARIAMO IL CICLO
 
-blackboardElement.innerText = '';
 
 for (let i = 1; i <= 100; i++) {
-    //scambio con fizzbuzz
-  if (i % 3 === 0 && i % 5 === 0) {
-    blackboardElement.innerText += "fizzbuzz";
-  } else if (i % 3 === 0) {
-    blackboardElement.innerText += "fizz"; // scambio con fizz
-  } else if (i % 5 === 0) {
-    blackboardElement.innerText += "buzz"; //scambio con buzz
-  } else {
-    blackboardElement.innerText += i;
-  }
+// contenuto base 
+
+let content = i;
+
+// consideriamo multipli 
+
+if (i % 15 === 0) content = 'fizzbuzz';
+else if (i % 3 === 0) content = 'fizz';
+else if (i % 5 === 0) content = 'buzz';
+
+
+//stampo in pagina
+
+listElement.innerHTML += `<li class="${content}">${content}</li>`;
 }

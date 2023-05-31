@@ -6,7 +6,7 @@
 
 .container{
     margin: 0 auto;
-    max-width: 1080px; 
+    max-width: 1100px; 
 }
 
 #classroom{
@@ -22,11 +22,42 @@
     box-shadow: 5px 5px 5px solid #999;
     padding: 8px;
     line-height: 1;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     word-break: break-all;
 }
 
 h1{
     color: white;
     text-align: center;
+}
+
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    width: 100px;
+    height: 100px;
+    border:  5px solid #083b4c;
+    background-color: #1389b2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul li.buzz {
+    background-color: #ffd166;
+}
+
+ul li.fizz{
+    background-color: #0bd6a1;
+}
+
+ul li.fizzbuzz{
+    background-color: #f0466f;
 }
